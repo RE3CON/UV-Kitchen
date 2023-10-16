@@ -1,1 +1,0 @@
-Container for Schematics in KiCad Format
