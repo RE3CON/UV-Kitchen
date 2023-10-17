@@ -2,7 +2,7 @@
 @mkdir temp 2>NUL
 @del /F temp\fw.dec.bin temp\fw.ver.bin 2>NUL
 
-@echo Extracting firmare...
+@echo Extracting firmware...
 python qsfirm.py unpack k5_v2.01.31_publish.bin temp\fw.dec.bin temp\fw.ver.bin
 :: pause
 :: mods implying firmware grow
