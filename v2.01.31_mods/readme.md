@@ -1,9 +1,10 @@
-## My own set of 2.01.31 firmware mods for Quansheng UV-K5 VHF/UHF Handheld
+## [LarSen's set of 2.01.31 firmware mods](https://github.com/Lar-Sen/Quansheng_UV-K5_Kitchen) for Quansheng UV-K5, UV-K5(8), UV-K6, UV-5R PLUS VHF/UHF Handheld HAM Walkie Talkies.
+## Customized enhanced by @RE3CON with [Amnemonic's UVMOD Kitchen 31](https://github.com/amnemonic/Quansheng_UV-K5_Firmware/tree/main/uvmod_kitchen_31) additions and more...
 
 ### Prerequisites 
- - Windows, XP at least
+ - Windows XP or higher
  - Python 3.6.8 (at least) installed
- - Kenwood type serial comms cable (USB or RS-232)
+ - Kenwood/BaoFeng type serial comm cable (USB or RS-232)
 
 ### How to use this?
  - customize included mods, for example `mod_custom_freq_ranges.py` has possibility to edit frequency ranges
@@ -17,7 +18,7 @@
 <hr>
 
 ### `mod_2to1_compressor.py`
-My contribution: Activates only compressor part of the integrated compander, to get better modulation dynamics.
+LarSeN contribution: Activates only compressor part of the integrated compander, to get better modulation dynamics.
 Auto-disables when VOX set, to preserve accuracy in digital modes.
 <hr>
 
@@ -28,7 +29,7 @@ Tip: Best to check my `mod_custom_symbols.py` which entirely replaces all icons 
 <hr>
 
 ### `mod_bugspatch.py`
-My contribution: Various ROM patches for Quansheng genuine firmware bugs. Evolutive.
+LarSeN contribution: Various ROM patches for Quansheng genuine firmware bugs. Evolutive.
 <hr>
 
 ### `mod_change_contrast.py`
@@ -37,13 +38,13 @@ Allows to change LCD appearance, e.g black pixels get more black.
 Customization:  A good value is 35. Beware not to put too high value, as this is suspected to shorten LCD lifespan.
 
 ### `mod_change_burst_tones`
-My contribution: Now allows to change PTT+F2 and 'long-press F1' burst tones. Defaults are 1750Hz and 1050Hz.
+LarSeN contribution: Now allows to change PTT+F2 and 'long-press F1' burst tones. Defaults are 1750Hz and 1050Hz.
 
 Replaces mod_change_Tone_1750Hz.py.
 <hr>
 
 ### `mod_change_freq_scan_timeout.py`
-My contribution: Remove infinite time (useless). Instead, restore activity graph which was stuck in previous version.
+LarSeN contribution: Remove infinite time (useless). Instead, restore activity graph which was stuck in previous version.
 
 After applying this mod, the FREQ CLONE and CTC/DCS SCAN function ([F]+4, [F]+Scan) will run till given timeout or if user press [Exit] button.
 <hr>
@@ -70,7 +71,7 @@ Customization: Blocks AIR band by default. You can change it at the beginning of
 <hr>
 
 ### `mod_custom_bootscreen_narrow.py`
-My contribution: Completely reworked the display routine. Now better nested and switchable from main menu (edit line FULL to Logo).
+LarSeN contribution: Completely reworked the display routine. Now better nested and switchable from main menu (edit line FULL to Logo).
 
 Adds a customisable boot screen, sparing ROM bytes by allowing an offset from top of the screen.
 
@@ -80,18 +81,18 @@ Import file, change for "Vertical drawing" at the end of the page, then click ge
 <hr>
 
 ### `mod_custom_ctcss_codes.py`
-My contribution: Genuine CTCSS embedded code list is badly numbered. I restored CTCSS base code list+extended codes to the end.
+LarSeN contribution: Genuine CTCSS embedded code list is badly numbered. I restored CTCSS base code list+extended codes to the end.
 Please keep in mind that Quansheng codeplug software won't be aware of the new ordered list: Just check your channels after programming.
 <hr>
 
 ### `mod_custom_digits.py`
-My contribution: Grouped some of the best fonts for Big and Small digits display (BBC mode 7, Geneva, Terminus, Videotex, old computer, etc)
+LarSeN contribution: Grouped some of the best fonts for Big and Small digits display (BBC mode 7, Geneva, Terminus, Videotex, old computer, etc)
 
 Change fonts used to display big and small digits.
 <hr>
 
 ### `mod_custom_font.py`
-My contribution: Integrated some good fonts (Apple Chicago, CP/M..)
+LarSeN contribution: Integrated some good fonts (Apple Chicago, CP/M..)
 Customization:
 You can generate your own fonts using utils/fonts_and_graphics/img2cpp.htm . You just have to insert generated string to the beginning of the python script, at font = b'\STRINGSTRINGSTRING'
 <hr>
@@ -101,21 +102,24 @@ The purpose of  this mod is to unlock receiving range of the transceiver. Defaul
 <hr>
 
 ### `mod_custom_mdc_data.py`
-My contribution: Aims to produce a better MDC signalling when MDC1200 roger beep is chosen. String is an EOT for PTT-ID 0001.
+LarSeN contribution: Aims to produce a better MDC signalling when MDC1200 roger beep is chosen. String is an EOT for PTT-ID 0001.
 <hr>
 
 ### `mod_custom_noaa_freqs.py`
-My contribution: default is now first 1-7 GMRS channels and 22-20 GMRS call/repeater channels. This is because of forced 12.5kHz deviation.
+The default is now replaced with:
+```#first 10 PMR446 channels
+new_noaa_table =   [446_006_250, 446_018_750, 446_031_250, 446_043_750, 446_056_250, 446_068_750, 446_081_250, 446_093_750, 446_106_250, 446_118_750]```
+LarSeN contribution: First 1-7 GMRS channels and 22-20 GMRS call/repeater channels. This is because of forced 12.5kHz deviation.
 Also check mod_disable_1050hz_noaa, to use these without 1050Hz toneburst.
-Customization: Just sets new values for frequencies in NOAA scan list, nothing less, nothing more. 
+Customization: Just set up to 10 new freq values for the frequencies in NOAA scan list, nothing less, nothing more. 
 <hr>
 
 ### `mod_disable_1050hz_noaa.py`
-My contribution: Permits normal listening and background scan detection of said "NOAA" channels, without needing for 1050Hz toneburst.
+LarSeN contribution: Permits normal listening and background scan detection of said "NOAA" channels, without needing for 1050Hz toneburst.
 <hr>
 
 ### `mod_custom_symbols.py`
-My contribution: Integrated BMP converter, and better symbols (I hope!)
+LarSeN contribution: Integrated BMP converter, and better symbols (I hope!)
 
 Customization: Just edit provided Symbols_mod.bmp. Keep in mind that you must keep orientation and file format as 2 color BMP.
 
@@ -142,16 +146,16 @@ Not harmful to enable.
 <hr>
 
 ### `mod_fm_radio_64-108mhz.py`
-My contribution: Now a working 64 to 108MHz, and function keys remapping (F+VFO: memory recall, F+FM:scan, F+FC:auto-MR)
+LarSeN contribution: Now a working 64 to 108MHz, and function keys remapping (F+VFO: memory recall, F+FM:scan, F+FC:auto-MR)
 Extends WFM receive range from 64MHz to 108MHz.
 <hr>
 
 ### `mod_increase_backlight_timeout`
-My contribution: Fixed old derpy way to increase backlight expiry time. Now factor is a multiplier*500ms. New: Backlight forever if set to 5.
+LarSeN contribution: Fixed old derpy way to increase backlight expiry time. Now factor is a multiplier*500ms. New: Backlight forever if set to 5.
 <hr>
 
 ### `mod_menu_strings.py`
-My contribution: Edited most of the menu text, messages, and option text to get a better conformity to standards. A must have.
+LarSeN contribution: Edited most of the menu text, messages, and option text to get a better conformity to standards. A must have.
 <hr>
 
 ### `mod_mic_gain.py`
@@ -207,14 +211,14 @@ Default value for copying setting over the air aka "AIR COPY" is 410.025 MHz. Yo
 <hr>
 
 ### `mod_roger_beep.py`
-My contribution: Now with single, dual, or triple beep!  Completely rewrote roger routine.
+LarSeN contribution: Now with single, dual, or triple beep!  Completely rewrote roger routine.
 You can change duration and/or frequency for each tone used. Put 0 in correct duration if single ou dual beep is preferred.
 
 Change "Roger" beep tones.
 <hr>
 
 ### `mod_rssi_bars.py`
-My contribution: Change RSSI meter behaviour, using 7 possible step bars. Evaluating RSSI is done via maths linear approach.
+LarSeN contribution: Change RSSI meter behaviour, using 7 possible step bars. Evaluating RSSI is done via maths linear approach.
 Completely rewrote routine, and created new function to blink flashlight (call, alarm)
 
 Customization:
@@ -225,9 +229,13 @@ Upgrades genuine RSSI meter. Also makes use of freed ROM space to put new routin
 <hr>
 
 ### `mod_widen_scr_range`
-My contribution:
+LarSeN contribution:
 Changes the scrambler inversion frequency range. Step mod from 100Hz to more conventional 115.5Hz, in order to reach theorical scrambling maximum at 3730Hz (~step/2)
 <hr>
 
-	LarSeN.
+### `mod_universal_version.py`
+Allow to flash the custom output firmware file on UV-K5(8)/UV-K6 and UV-5R PLUS.
+Instead of a fixed firmware version number will be `*` Asterisk sign used as placeholder (HEX 2A in fw.ver.bin unpacked). This allows overwrite any existing firmware and make crossflashing possible even on [OSFW based](https://github.com/OneOfEleven/uv-k5-firmware-custom) F/W. It prevent Flasher Errors such as invalid Version etc... The * (wildcard) stands here in code for universal version. It will make it work on all Quansheng UV-K5 and compatible radios based on the same HW Chip.
+ 
+	All credits to [LarSeN](https://github.com/Lar-Sen/Quansheng_UV-K5_Kitchen) for his brilliant work.
 
