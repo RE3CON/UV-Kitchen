@@ -95,6 +95,10 @@ Script just reboots device. Command not produce any output in normal situation. 
 
 
 ### `batt_calibrator.py`
+
+1. Open run-batt-cal.bat in editor and change the COM Port number from COM8 to your matching port number twice by read and calibrate.
+2. run-batt-cal.bat 
+
 Arguments:
 ```
 batt_calibrator.py <COMx> <read | write  val0 val1 val2 val3 val4 val5 | calibrate>
