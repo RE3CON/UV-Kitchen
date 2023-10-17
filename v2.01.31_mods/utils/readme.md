@@ -121,3 +121,11 @@ now follow steps:
 
 You can backup current calibration values by starting `batt_calibrator.py COM1 read`
 
+### `mic_callibrator.py`
+
+1. Open run-mic-cal.bat in editor and change the COM Port number from COM8 to your matching port number twice by read and write.
+2. run-mic-cal.bat 
+
+The default values are: 3 8 14 19 24
+To read the Mic sensity enties of the 5 Levels run cmd: py mic_calibrator.py COM8 read
+To calibrate Mic sensity enties in 5 Levels run cmd: py mic_calibrator.py COM8 write 6 14 20 25 31
