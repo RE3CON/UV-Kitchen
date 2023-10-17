@@ -20,7 +20,7 @@ python v31\mod_change_contrast.py temp\fw.dec.bin
 python v31\mod_change_freq_scan_timeout.py temp\fw.dec.bin
 python v31\mod_change_RF_switch_threshold.py temp\fw.dec.bin
 python v31\mod_change_tx_limits.py temp\fw.dec.bin
-rem python v31\python mod_remove_tx_limits.py temp\fw.dec.bin
+rem python v31\mod_remove_tx_limits.py temp\fw.dec.bin
 python v31\mod_custom_ctcss_codes.py temp\fw.dec.bin
 rem python v31\mod_custom_font_VCR.py	temp\fw.dec.bin
 rem python v31\mod_custom_font_DO7OO.py	temp\fw.dec.bin
