@@ -2,7 +2,7 @@
 @rmdir /q /s temp 2>NUL
 @mkdir temp
 
-@echo Extracting firmare...
+@echo Extracting firmware...
 python qsfirm.py unpack k5_v2.01.31_publish.bin temp\fw.dec.bin temp\fw.ver.bin
 
 :: here comment or uncomment mods
