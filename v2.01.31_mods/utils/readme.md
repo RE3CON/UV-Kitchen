@@ -121,7 +121,7 @@ now follow steps:
 
 You can backup current calibration values by starting `batt_calibrator.py COM1 read`
 
-### `mic_callibrator.py`
+### `mic_calibrator.py`
 
 1. Open run-mic-cal.bat in editor and change the COM Port number from COM8 to your matching port number twice by read and write.
 2. run-mic-cal.bat 
