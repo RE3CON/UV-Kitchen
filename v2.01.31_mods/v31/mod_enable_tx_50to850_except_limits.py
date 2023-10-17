@@ -1,6 +1,6 @@
 #Set below frequency range to be TX blocked
-block_freq_lo = 24_890_000
-block_freq_hi = 136_999_900
+block_freq_lo = 630_000_000
+block_freq_hi = 759_999_900
 
 ##--------------------- do not modify below this line ---------------------------------------------------
 import os,sys,struct

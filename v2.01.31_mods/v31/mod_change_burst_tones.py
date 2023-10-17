@@ -1,7 +1,5 @@
 # Changes the PTT+F2 and long-F1 tones, used to open HAM Repeaters and NOAA Channels. The default is 1750 Hz. To open NOAA Tone Squelch set 1050 Hz.
 # Other not so common repeater tone pulse freq are 1000Hz, 1450Hz, 1750Hz, 2100Hz
-# THIS MOD DOES NOT WORK - ISSUE TRACKED HERE: https://github.com/amnemonic/Quansheng_UV-K5_Firmware/issues/85
-# Essai: Bug fix de RE3CON: Non plus...
 
 toneptt = int(1750) # change to any frequency in Hz
 toneside = int(1050)
@@ -16,7 +14,6 @@ fw =  bytearray(open(sys.argv[1],'rb').read())
 if fw[0x2A3C] == 0xd6 and fw[0x2A3D] == 0x06 :
     print('Changing by-PTT+F2 tone burst frequency to',toneptt,'Hz')
     fw[0x2A3C:0x2A3C+4] = struct.pack('<I',toneptt)
-    ##RE3CON    fw[0x2A40:0x2A40+4] = b'\x00\x00\x00\x00'
     print('Changing by-longF1 alternate tone burst frequency to',toneside,'Hz')
     fw[0x7BDC:0x7BDC+4] = struct.pack('<I',toneside)
     ##fw[0x7B22:0x7B22+6] = b'\x12\xD0\x03\x28\x12\xD0' #inverts PTT check for side F2

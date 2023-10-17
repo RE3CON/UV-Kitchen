@@ -1,6 +1,6 @@
 # change below sets to new ones, values are in Hz
-tx_low_limit  = 118_000_000
-tx_high_limit = 629_999_900
+tx_low_limit  =    18_000_000
+tx_high_limit = 1_300_000_000
 
 ##--------------------- do not modify below this line ---------------------------------------------------
 import os,sys,struct
