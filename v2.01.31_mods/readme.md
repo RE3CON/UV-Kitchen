@@ -36,6 +36,7 @@ LarSeN contribution: Various ROM patches for Quansheng genuine firmware bugs. Ev
 Allows to change LCD appearance, e.g black pixels get more black.
 
 Customization:  A good value is 35. Beware not to put too high value, as this is suspected to shorten LCD lifespan.
+<hr>
 
 ### `mod_change_burst_tones`
 LarSeN contribution: Now allows to change PTT+F2 and 'long-press F1' burst tones. Defaults are 1750Hz and 1050Hz.
@@ -92,6 +93,7 @@ Change fonts used to display big and small digits.
 
 ### `mod_custom_font.py`
 LarSeN contribution: Integrated some good fonts (Apple Chicago, CP/M..)
+
 Customization:
 You can generate your own fonts using utils/fonts_and_graphics/img2cpp.htm . You just have to insert generated string to the beginning of the python script, at font = b'\STRINGSTRINGSTRING'
 <hr>
@@ -99,6 +101,7 @@ You can generate your own fonts using utils/fonts_and_graphics/img2cpp.htm . You
 ### `mod_custom_freq_ranges.py`
 The purpose of this mod is to unlock receiving range of the transceiver. Default is 25-630MHz.
 
+Customization:
 Here you can change low and high limit for each frequency band. 
 The underscore `_` symbol is omitted by python interpreter and is added only for better readability.
 So for example, if you want to fill the gap between 76 and 108Mhz then in second array change first limit from `76_000_000` to `107_999_990` or 
@@ -111,17 +114,19 @@ LarSeN contribution: Aims to produce a better MDC signalling when MDC1200 roger 
 <hr>
 
 ### `mod_custom_noaa_freqs.py`
-The default is now replaced with:
+The default NOAA Frequencies are now replaced with:
 ``#first 10 PMR446 channels
 new_noaa_table =   [446_006_250, 446_018_750, 446_031_250, 446_043_750, 446_056_250, 446_068_750, 446_081_250, 446_093_750, 446_106_250, 446_118_750]``
 
-LarSeN contribution: First 1-7 GMRS channels and 22-20 GMRS call/repeater channels. This is because of forced 12.5kHz deviation.
 Also check mod_disable_1050hz_noaa, to use these without 1050Hz toneburst.
+
+LarSeN contribution: First 1-7 GMRS channels and 22-20 GMRS call/repeater channels. This is because of forced 12.5kHz deviation.
+
 Customization: Just set up to 10 new freq values for the frequencies in NOAA scan list, nothing less, nothing more. 
 <hr>
 
 ### `mod_disable_1050hz_noaa.py`
-LarSeN contribution: Permits normal listening and background scan detection of said "NOAA" channels, without needing for 1050Hz toneburst.
+LarSeN contribution: Permits normal listening and background scan detection of said "NOAA" channels, without the need for 1050Hz toneburst to open the tone squelch at the beginning of every transmission.
 <hr>
 
 ### `mod_custom_symbols.py`
@@ -186,7 +191,7 @@ Changes array of frequency steps in menu at position 2
 <hr>
 
 ### `mod_enable_tx_50to850.py`
-No customization. You can just disable or enable it in `build.bat`. The purpose of this mod is to **globally disable/bypass** TX lock. 
+No customization. You can just disable or enable it in `build.bat`. The purpose of this mod is to **globally disable/bypass** the TX lock. 
 
 ℹ️ This patch alone doesn't extend available frequency ranges. For this use `mod_custom_freq_ranges.py` mod.
 <hr>
@@ -210,7 +215,8 @@ Default value for copying setting over the air aka "AIR COPY" is 410.025 MHz. Yo
 LarSeN contribution: Now with single, dual, or triple beep!  Completely rewrote roger routine.
 You can change duration and/or frequency for each tone used. Put 0 in correct duration if single ou dual beep is preferred.
 
-Change "Roger" beep tones.
+Customization:
+Change "Roger" beep tones and timings.
 <hr>
 
 ### `mod_rssi_bars.py`
