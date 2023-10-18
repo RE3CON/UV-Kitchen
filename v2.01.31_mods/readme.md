@@ -65,7 +65,6 @@ Creates a band block for TX frequencies: an interval where you're not allowed to
 Please be aware that TXing below ~80MHz is known to produce a considerable amount of spurious emissions with this unit.
 
 Customization: Blocks AIR band by default. You can change it at the beginning of the script.
-<hr>
 
 ℹ️This patch alone doesn't extend available frequency ranges. For this use `mod_custom_freq_ranges.py` mod.
 <hr>
