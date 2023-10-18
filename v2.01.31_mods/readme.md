@@ -86,7 +86,7 @@ Please keep in mind that Quansheng codeplug software won't be aware of the new o
 <hr>
 
 ### `mod_custom_digits.py`
-LarSeN contribution: Grouped some of the best fonts for Big and Small digits display (BBC mode 7, Geneva, Terminus, Videotex, old computer, etc)
+LarSeN contribution: Grouped some of the best fonts for Big and Small digits display (BBC mode 7, Geneva, Terminus, Videotex, old computer, etc...)
 
 Change fonts used to display big and small digits.
 <hr>
@@ -98,7 +98,7 @@ You can generate your own fonts using utils/fonts_and_graphics/img2cpp.htm . You
 <hr>
 
 ### `mod_custom_freq_ranges.py`
-The purpose of  this mod is to unlock receiving range of the transceiver. Default is 25-630MHz.
+The purpose of this mod is to unlock receiving range of the transceiver. Default is 25-630MHz.
 <hr>
 
 ### `mod_custom_mdc_data.py`
@@ -107,8 +107,9 @@ LarSeN contribution: Aims to produce a better MDC signalling when MDC1200 roger 
 
 ### `mod_custom_noaa_freqs.py`
 The default is now replaced with:
-```#first 10 PMR446 channels
-new_noaa_table =   [446_006_250, 446_018_750, 446_031_250, 446_043_750, 446_056_250, 446_068_750, 446_081_250, 446_093_750, 446_106_250, 446_118_750]```
+``#first 10 PMR446 channels
+new_noaa_table =   [446_006_250, 446_018_750, 446_031_250, 446_043_750, 446_056_250, 446_068_750, 446_081_250, 446_093_750, 446_106_250, 446_118_750]``
+
 LarSeN contribution: First 1-7 GMRS channels and 22-20 GMRS call/repeater channels. This is because of forced 12.5kHz deviation.
 Also check mod_disable_1050hz_noaa, to use these without 1050Hz toneburst.
 Customization: Just set up to 10 new freq values for the frequencies in NOAA scan list, nothing less, nothing more. 
@@ -160,6 +161,8 @@ LarSeN contribution: Edited most of the menu text, messages, and option text to 
 
 ### `mod_mic_gain.py`
 My contribution: Mod is next to useless now. Please check my "utils/mic_calibrator.py". Good values have to be set in EEPROM.
+
+ℹ️ This patch doesn't extend available mic gain steps (they will still be 0-4.) It just increases the _starting point_ on the mic gain scale sent to the BK4819 mic sensitivity register.
 <hr>
 
 ### `mod_negative_screen.py`
@@ -191,10 +194,6 @@ No customization. You can just disable or enable it in `build.bat`. The purpose 
 ℹ️ This patch alone doesn't extend available frequency ranges. For this use `mod_custom_freq_ranges.py` mod.
 <hr>
 
-ℹ️ This patch doesn't extend available mic gain steps (they will still be 0-4.) It just increases the _starting point_ on the mic gain
-scale sent to the BK4819 mic sensitivity register.
-<hr>
-
 ### `mod_negative_screen.py`
 No customization. You can just disable or enable it in `build.bat`.
 
@@ -223,7 +222,7 @@ Completely rewrote routine, and created new function to blink flashlight (call, 
 
 Customization:
 VHF: @14B2 origin offset, @14B4 slope, @14B6 s=0 limit. UHF: @14CE origin offset, @14D0 slope, @14D2 s=0 limit.
-NEED to change Symbols font: 7 bars+eliminate antenna icon. If you disable this mod, please replace Symbols_mod.bmp in v31 directory by Symbols_mod_(without_rssi_patch).bmp .
+NEED to change Symbols font: 7 bars+eliminate antenna icon. If you disable this mod, please replace Symbols_mod.bmp in v31 directory by Symbols_mod_(without_rssi_patch).bmp
 
 Upgrades genuine RSSI meter. Also makes use of freed ROM space to put new routines which make flashlight blink when called via DTMF SelCall, and when Alarm is triggered.
 <hr>
@@ -237,5 +236,5 @@ Changes the scrambler inversion frequency range. Step mod from 100Hz to more con
 Allow to flash the custom output firmware file on UV-K5(8)/UV-K6 and UV-5R PLUS.
 Instead of a fixed firmware version number will be `*` Asterisk sign used as placeholder (HEX 2A in fw.ver.bin unpacked). This allows overwrite any existing firmware and make crossflashing possible even on [OSFW based](https://github.com/OneOfEleven/uv-k5-firmware-custom) F/W. It prevent Flasher Errors such as invalid Version etc... The * (wildcard) stands here in code for universal version. It will make it work on all Quansheng UV-K5 and compatible radios based on the same HW Chip.
  
-	All credits to [LarSeN](https://github.com/Lar-Sen/Quansheng_UV-K5_Kitchen) for his brilliant work.
+All credits to [LarSeN](https://github.com/Lar-Sen/Quansheng_UV-K5_Kitchen) for his brilliant work.
 
