@@ -99,6 +99,12 @@ You can generate your own fonts using utils/fonts_and_graphics/img2cpp.htm . You
 
 ### `mod_custom_freq_ranges.py`
 The purpose of this mod is to unlock receiving range of the transceiver. Default is 25-630MHz.
+
+Here you can change low and high limit for each frequency band. 
+The underscore `_` symbol is omitted by python interpreter and is added only for better readability.
+So for example, if you want to fill the gap between 76 and 108Mhz then in second array change first limit from `76_000_000` to `107_999_990` or 
+if you want to extend above 600MHz then change last limit from `600_000_000` to `1300_000_000`. Please keep in mind that different ranges 
+are demodulated slightly different inside BK4819 chip, and some ranges have enabled AM demodulation while other don't. 
 <hr>
 
 ### `mod_custom_mdc_data.py`
@@ -167,16 +173,8 @@ My contribution: Mod is next to useless now. Please check my "utils/mic_calibrat
 
 ### `mod_negative_screen.py`
 No customization.
-<hr>
 
 Edits initialization routine of ST7565 (LCD controller) to change default LCD mode normal to negative.
-<hr>
-
-Here you can change low and high limit for each frequency band. 
-The underscore `_` symbol is omitted by python interpreter and is added only for better readability.
-So for example, if you want to fill the gap between 76 and 108Mhz then in second array change first limit from `76_000_000` to `107_999_990` or 
-if you want to extend above 600MHz then change last limit from `600_000_000` to `1300_000_000`. Please keep in mind that different ranges 
-are demodulated slightly different inside BK4819 chip, and some ranges have enabled AM demodulation while other don't. 
 <hr>
 
 ### `mod_custom_steps.py`
