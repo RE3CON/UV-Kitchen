@@ -9,6 +9,8 @@ A ready to flash .bin firmware file is also provided next to a batch .bat file f
 
 # Quansheng_UV-K6_Kitchen
 
+![Alt text](20231019_123253.jpg?raw=true "UV-K5(8), UV-K6 Menu")
+
 `v3.00.15`
 Customizable Firmware Patches. Mods written in Python for the latest UV-K6 official firmware (released 2023-09-02) by [stache3000](https://github.com/stache3000). Partial port to [v3.00.15](https://github.com/amnemonic/Quansheng_UV-K5_Firmware/tree/e35148151593f4dbdf86c365ee2c8305871960d5) from v2.01.31.
 Including a compiled flashable modded Firmware file (K6_V3.00.15-MODDED.bin) and a batch file to compile it by self.
