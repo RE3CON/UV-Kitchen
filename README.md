@@ -17,6 +17,8 @@ Including a compiled flashable modded Firmware file (K6_V3.00.15-MODDED.bin) and
 
 # Quansheng Firmware Flasher
 
+![Alt text](FW-Updater.JPG?raw=true "Quansheng Firmware Updater")
+
 `Updater`
 Latest Quansheng decompressed windows tool to flash the firmware to DP32G030 MCU in bootloader mode (push PTT + PowerOn to enable flashing, the LED Flashlight goes on), using a standard or universal BaoFeng/Kenwood serial cable (USB or RS-232 adapter)
 
