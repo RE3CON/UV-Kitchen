@@ -2,10 +2,10 @@
 @rmdir /q /s temp 2>NUL
 @mkdir temp
 
-@echo Extracting firmare...
+@echo Extracting Firmware...
 python qsfirm.py unpack K6_V3.00.15.bin temp\fw.dec.bin temp\fw.ver.bin
 
-:: here comment or uncomment mods
+:: comment or uncomment the mods you want to apply. With the word REM at the beginning of each line deaktivates mods.
 
 python mod_custom_freq_ranges.py temp\fw.dec.bin
 python mod_remove_tx_limits.py   temp\fw.dec.bin
@@ -16,6 +16,7 @@ python mod_custom_steps.py       temp\fw.dec.bin
 
 :: end of mods
 
-@echo Repacking firmware...
+@echo Repacking Firmware binary ready to flash...
 python qsfirm.py pack temp\fw.dec.bin temp\fw.ver.bin K6_V3.00.15-MODDED.bin
 
+cmd /k
