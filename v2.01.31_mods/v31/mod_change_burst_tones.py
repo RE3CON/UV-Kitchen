@@ -21,6 +21,5 @@ if fw[0x2A3C] == 0xd6 and fw[0x2A3D] == 0x06 :
 else:
     print('ERROR: Cant find function');sys.exit(1)
 
-
 open(sys.argv[1],'wb').write(fw)
 
