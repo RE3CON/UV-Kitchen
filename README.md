@@ -3,7 +3,7 @@ A collection of Mods and customization for the Quansheng UV-K5, UV-K6 and UV-5R 
 
 ![Alt text](Images/screen_preview.jpg?raw=true "Main display preview after mod")
 
-`v2.01.31`
+`[v2.01.31](https://github.com/RE3CON/UV-Kitchen/tree/main/v2.01.31_mods)`
 Customizable Firmware ROM patches written in Python and targeted for the latest [UV-K5 Firmware version 2.01.31](https://github.com/amnemonic/Quansheng_UV-K5_Firmware/tree/main/firmware).
 A ready to flash .bin firmware file is also provided next to a batch .bat file for self compilation, updated everytime needed.
 
