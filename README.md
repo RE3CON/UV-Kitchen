@@ -32,7 +32,8 @@ Latest Quansheng decompressed windows tool to flash the firmware to DP32G030 MCU
 [Read instructions](https://github.com/RE3CON/UV-Kitchen/blob/main/v2.01.31_mods/utils/readme.md)
 
 # [Download all together in a zip file](https://github.com/RE3CON/UV-Kitchen/archive/refs/heads/main.zip) 
-Extract and ready to go...
-Edit the .bat file and comment out (REM) or uncomment the patches/mods of your choice. Make optional changes with an editor inside the mods, each in a .py file. 
+Extract and ready to go...<br/>
+Edit the .bat file and comment out (REM) or uncomment the patches/mods of your choice.<br/> 
+Make optional changes with an editor inside the mods, each in a .py file. 
 
 Have a look at the README files in the subdirectories [v2.01.32](https://github.com/RE3CON/UV-Kitchen/blob/main/v2.01.31_mods/readme.md) or [v3.00.15](https://github.com/RE3CON/UV-Kitchen/tree/main/v3.00.15_mods) for customizations.
