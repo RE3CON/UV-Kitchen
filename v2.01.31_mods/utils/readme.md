@@ -1,7 +1,7 @@
 ## Various utility scripts useful when modding / reversing firmware. 
 All scripts uses my library `libuvk5.py`. Scripts tested only on windows.
 
-To read write access COM Port (Serial/USB Cable) must be the Serial Module installed into Python.
+To read write access COM Port (Serial/USB Cable) must be the [Serial Module](https://github.com/RE3CON/UV-Kitchen/blob/main/v2.01.31_mods/utils/pyserial-3.5b0-py2.py3-none-any.whl) installed into Python.
 
 Install from command prompt/cmd the serial module for Python: 
 ```
