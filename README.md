@@ -22,6 +22,13 @@ Including a compiled flashable modded Firmware file (K6_V3.00.15-MODDED.bin) and
 ## [Updater](https://github.com/RE3CON/UV-Kitchen/tree/main/Updater)
 Latest Quansheng decompressed windows tool to flash the firmware to DP32G030 MCU in bootloader mode (push PTT + PowerOn to enable flashing, the LED Flashlight goes on), using a standard or universal BaoFeng/Kenwood serial cable (USB or RS-232 adapter)
 
+## [Utilities](https://github.com/RE3CON/UV-Kitchen/tree/main/v2.01.31_mods/utils)
+Batterie Voltage adjustment
+Microphone Sensitivity Callibration
+Squelch calibration
+... and other stuff ...
+[Read instructions](https://github.com/RE3CON/UV-Kitchen/blob/main/v2.01.31_mods/utils/readme.md)
+
 # [Download it in a zip file](https://github.com/RE3CON/UV-Kitchen/archive/refs/heads/main.zip) 
 Extract and ready to go...
 Edit the .bat file and comment out (REM) or uncomment the patches/mods of your choice. Make optional changes with an editor inside the mods, each in a .py file. 
