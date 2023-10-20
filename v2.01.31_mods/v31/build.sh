@@ -45,7 +45,8 @@ python3 mod_mic_gain.py 				temp\fw.dec.bin
 # python3 mod_negative_screen.py 	temp\fw.dec.bin
 # python3 mod_ota_qrg.py 			temp\fw.dec.bin
 python3 mod_roger_beep.py 			temp\fw.dec.bin
-python3 mod_rssibars.py 				temp\fw.dec.bin
+# python3 mod_rssibars.py 				temp\fw.dec.bin
+python3 mod_rssibars_SOS_alert.py  temp\fw.dec.bin
 python3 mod_widen_scr_range.py 		temp\fw.dec.bin
 python3 mod_bugspatch.py 			temp\fw.dec.bin
 python3 mod_universal_version.py 	temp\fw.ver.bin
