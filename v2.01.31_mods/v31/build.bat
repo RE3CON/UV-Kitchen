@@ -51,9 +51,10 @@ python mod_menu_strings.py 			temp\fw.dec.bin
 rem python mod_menu_strings_org.py	temp\fw.dec.bin
 python mod_mic_gain.py 				temp\fw.dec.bin
 REM python mod_negative_screen.py 	temp\fw.dec.bin
-rem python mod_ota_qrg.py 			temp\fw.dec.bin
+rem python mod_ota_qrg.py 		temp\fw.dec.bin
 python mod_roger_beep.py 			temp\fw.dec.bin
-python mod_rssibars.py 				temp\fw.dec.bin
+REM python mod_rssibars.py 				temp\fw.dec.bin
+python mod_rssibars_SOS_alert.py  temp\fw.dec.bin
 python mod_widen_scr_range.py 		temp\fw.dec.bin
 python mod_bugspatch.py 			temp\fw.dec.bin
 python mod_universal_version.py 	temp\fw.ver.bin
