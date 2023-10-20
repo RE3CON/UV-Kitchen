@@ -2,7 +2,7 @@
 @mkdir temp 2>NUL
 @del /F temp\fw.dec.bin temp\fw.ver.bin 2>NUL
 
-@echo Extracting firmware...
+@echo Extracting Firmware...
 python qsfirm.py unpack k5_v2.01.31_publish.bin temp\fw.dec.bin temp\fw.ver.bin
 :: pause
 :: mods implying firmware grow
@@ -50,7 +50,8 @@ python v31\mod_mic_gain.py temp\fw.dec.bin
 REM python v31\mod_negative_screen.py temp\fw.dec.bin
 rem python v31\mod_ota_qrg.py temp\fw.dec.bin
 python v31\mod_roger_beep.py temp\fw.dec.bin
-python v31\mod_rssibars.py temp\fw.dec.bin
+rem python v31\mod_rssibars.py temp\fw.dec.bin
+python v31\mod_rssibars_SOS_alert.py  temp\fw.dec.bin
 python v31\mod_widen_scr_range.py temp\fw.dec.bin
 python v31\mod_bugspatch.py temp\fw.dec.bin
 python v31\mod_universal_version.py temp\fw.ver.bin
